@@ -9,9 +9,18 @@ class Conexion {
     protected $conn;
     protected $configFile = "conf.csv";
 
+    
 public function getConn(){
     return $this->conn;
 }
+public function __construct(){
+    $this->connect();
+}
+
+public function __destruct(){
+    $this->conn->close();
+}
+
 public function connect()
     {
         $configFile = fopen($this->configFile, "r") or die("Unable to open file!");
