@@ -5,7 +5,7 @@ class Connection
     private $host;
     private $userName;
     private $password;
-    private $db;    
+    private $db;
     protected $limit;
     protected $conn;
     protected $configFile = "conf.csv";
